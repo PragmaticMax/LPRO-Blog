@@ -18,13 +18,17 @@
     <link href="css/clean-blog.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/LPRO_Style.css">
     <link rel="stylesheet" type="text/css" href="css/dc.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+          integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+          crossorigin=""/>
+
 
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
+<style>#mapid { height: 360px; }</style>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -80,8 +84,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>Trends in the Oregon Medical Marijuana Program</h1>
-                    <h2 class="subheading">Changes since 2014</h2>
+                    <h1>The Oregon Medical Marijuana Program</h1>
+                    <h2 class="subheading">Overview</h2>
                     <span class="meta">Posted by Sione Filimoehala on May 12th, 2017</span>
                 </div>
             </div>
@@ -94,10 +98,53 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h2 class="section-heading">Trends in the Oregon Medical Marijuana Program since 2014</h2>
-                <p>Due to the passage of <a href="https://www.oregon.gov/olcc/marijuana/Documents/Measure91.pdf">Measure 91</a>, recreational Marijuana has become a significant source of revenue.
-                 Since this period of time, a series of trends in the Oregon Medical Marijuana Program (OMMP) have become evident.</p>
-            </div>
+            <h2 class="section-heading">Overview of Marijuana Law</h2>
+                <p>There is both a federal marijuana law and state
+
+                    marijuana law. The Controlled Substances Act
+
+                    (CSA) and the Cole Memos are the foundation
+
+                    of federal marijuana law. The Oregon Medical
+
+                    Marijuana Act (OMMA) and Ballot Measure 91
+
+                    (2014) are the two major state marijuana laws of
+
+                    Oregon.</p>
+            <h3>Controlled Substances Act</h3>
+                <p>The CSA regulates
+
+                    the manufacture, distribution, possession and use
+
+                    of controlled substances. The CSA creates five
+
+                    Schedules to classify controlled substances;
+
+                    Schedule I is the most controlled and Schedule
+
+                    V is the least.</p>
+                <p>Schedule I drugs have a high potential for abuse
+
+                    and no currently accepted medical use in the
+
+                    United States. The CSA lists marijuana as a
+
+                    Schedule I drug. Other Schedule I drugs include
+
+                    heroin and LSD.</p>
+            <h3>Cole Memos</h3>
+                <p>The Cole Memos are a series of
+
+                    memos written by Deputy Attorney General
+
+                    James M. Cole. They provide guidance to
+
+                    federal prosecutors on the enforcement of the
+
+                    CSA with the passage of medical or recreational
+
+                    marijuana legalization in some states.</p></div>
         </div>
     </div>
 
@@ -110,7 +157,7 @@
                     <button type="button" class="btn btn-primary" onclick="button3()">Caregivers</button>
                     <button type="button" class="btn btn-primary" onclick="button4()">Growsites</button>
                     </div>
-                    <div id="test"></div>
+                    <div id="test" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"></div>
 
                     <script type="text/javascript" src="js/d3.js"></script>
                     <script type="text/javascript" src="js/crossfilter.js"></script>
@@ -159,6 +206,7 @@
                     </script>
 
                 </div>
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -166,14 +214,32 @@
 
                 <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
 
-                <a href="#">
-                    <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
-                </a>
-                <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+                <div id="mapid"></div>
 
-                <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+                <span class="caption text-muted">Changes in the OMMP Since Jan 2015 by county.</span>
 
-                <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+                <h3>2015 Marijuana Legislation</h3>
+
+                <p>In 2015, the Joint Committee on Implementing
+
+                    Measure 91 (Committee) and Legislative
+
+                    Assembly passed several bills relating to
+
+                    marijuana. The bills that passed into law made
+
+                    significant changes to the OMMA, Measure 91
+
+                    or both. The bills also changed criminal
+
+                    enforcement law and expunction of marijuana
+
+                    crimes.</p>
+                <p>While not intended to be exhaustive, the list
+
+                    below outlines the major changes in marijuana
+
+                    law enacted by the 2015 Legislative Assembly.</p>
 
                 <p>Placeholder text by <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
             </div>
@@ -214,7 +280,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                <p class="copyright text-muted">Copyright &copy; Legisltive Policy and Research Office 2017</p>
             </div>
         </div>
     </div>
@@ -232,6 +298,57 @@
 
 <!-- Theme JavaScript -->
 <script src="js/clean-blog.min.js"></script>
+
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+<script type="text/javascript">
+
+    var map = L.map('mapid').setView([43.901056,-121.8548641],7);
+        L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
+        {
+        maxZoom: 18,
+        minZoom: 6
+        }).addTo(map);
+
+    function getColor(Change){
+        //condition ? valueIfTrue : valueIfFalse
+        return  Change <   500  ? '#d7191c' :
+                Change <   110  ? '#fdae61' :
+                Change <     0  ? '#ffffff' :
+                Change <  -143  ? '#ffffbf' :
+                Change <  -2702 ? '#a6d96a' :
+                                  '#1a9641' ;
+
+    }
+    // Set style function that sets fill color property equal to changes in OMMP
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.Change),
+            fillOpacity: 0.8,
+            weight: 1,
+            opacity: 0.3,
+            color: 'black'
+        };
+    }
+  L.geoJson.ajax('assets/OR_OMMP_Ch.geojson',
+        {
+            style: style,
+            onEachFeature: function (feature, layer) {
+                layer.bindTooltip('Change in Patients Since Jan 2015<br>' + feature.properties.Change.toString(),
+                    {permanent: false, direction: 'center', className: 'feature-tooltip'});
+            }
+        }).addTo(map);
+
+    var legend = L.control({position: 'bottomright'});
+    legend.onAdd = function (map) {
+        '<p><b>OMMP Patients in April 2017</b></p>' +
+        '<i style="background: #1a9641; opacity: 0.5"></i><p><b>Large Gains</b></p>' +
+        '<i style="background: #a6d96a; opacity: 0.5"></i><p><b>Modest Gains</b></p>' +
+        '<i style="background: #ffffbf; opacity: 0.5"></i><p><b>Slight Losses</b></p>' +
+        '<i style="background: #fdae61; opacity: 0.5"></i><p><b>Moderate Losses</b></p>' +
+        '<i style="background: #d7191c; opacity: 0.5"></i><p><b>Large Losses</b></p>'}.addTo(map);
+</script>
 
 </body>
 
