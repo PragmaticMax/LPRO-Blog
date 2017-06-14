@@ -313,43 +313,7 @@
         minZoom: 6
         }).addTo(map);
 
-    function getColor(Change){
-        //condition ? valueIfTrue : valueIfFalse
-        return  Change <   500  ? '#d7191c' :
-                Change <   110  ? '#fdae61' :
-                Change <     0  ? '#ffffff' :
-                Change <  -143  ? '#ffffbf' :
-                Change <  -2702 ? '#a6d96a' :
-                                  '#1a9641' ;
-
-    }
-    // Set style function that sets fill color property equal to changes in OMMP
-    function style(feature) {
-        return {
-            fillColor: getColor(feature.properties.Change),
-            fillOpacity: 0.8,
-            weight: 1,
-            opacity: 0.3,
-            color: 'black'
-        };
-    }
-  L.geoJson.ajax('assets/OR_OMMP_Ch.geojson',
-        {
-            style: style,
-            onEachFeature: function (feature, layer) {
-                layer.bindTooltip('Change in Patients Since Jan 2015<br>' + feature.properties.Change.toString(),
-                    {permanent: false, direction: 'center', className: 'feature-tooltip'});
-            }
-        }).addTo(map);
-
-    var legend = L.control({position: 'bottomright'});
-    legend.onAdd = function (map) {
-        '<p><b>OMMP Patients in April 2017</b></p>' +
-        '<i style="background: #1a9641; opacity: 0.5"></i><p><b>Large Gains</b></p>' +
-        '<i style="background: #a6d96a; opacity: 0.5"></i><p><b>Modest Gains</b></p>' +
-        '<i style="background: #ffffbf; opacity: 0.5"></i><p><b>Slight Losses</b></p>' +
-        '<i style="background: #fdae61; opacity: 0.5"></i><p><b>Moderate Losses</b></p>' +
-        '<i style="background: #d7191c; opacity: 0.5"></i><p><b>Large Losses</b></p>'}.addTo(map);
+    L.geoJson.ajax('assets/OR_OMMP_Ch.geojson').addTo(map);
 </script>
 
 </body>
