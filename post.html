@@ -179,7 +179,7 @@
                                 .yAxisLabel("Values")
                                 .xAxisLabel("Quarters since 2014")
                                 .clipPadding(10)
-                                .elasticY(true)
+                                .elasticY(false)
                                 .dimension(runDimension)
                                 .group(runGroup)
                                 .mouseZoomable(false)
@@ -306,7 +306,7 @@
 
 <script type="text/javascript">
 
-    var map = L.map('mapid').setView([43.901056,-121.8548641],7);
+    var map = L.map('mapid').setView([43.901056,-121.8548641],6);
         L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}',
         {
         maxZoom: 18,
@@ -314,6 +314,30 @@
         }).addTo(map);
 
     L.geoJson.ajax('assets/OR_OMMP_Ch.geojson').addTo(map);
+
+    function getColor(d) {
+        return d > 1000 ? '#d73027' :
+               d > 500  ? '#f46d43' :
+               d > 200  ? '#fdae61' :
+               d > 100  ? '#fee08b' :
+               d > 50   ? '#d9ef8b' :
+               d > 20   ? '#a6d96a' :
+               d > 10   ? '#66bd63' :
+                          '#1a9850' ;
+    }
+
+    function style(feature) {
+        return {
+            fillColor: getColor(feature.properties.Change),
+            weight: 2,
+            opacity: 1,
+            color: 'white',
+            dashArray: '3',
+            fillOpacity: 0.7
+        };
+    }
+
+    L.geoJson('assets/OR_OMMP_Ch.geojson', {style: style}).addTo(map);
 </script>
 
 </body>
